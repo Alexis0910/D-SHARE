@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습6</title>
+    <style>
+            @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            font-family: 'TmonMonsori';
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            font-size: 50px;
+
+        }
+        
+        #header{
+            height: 115px;
+            background-color: #b3e5fc ;
+            line-height: 115px;
+        }
+        #banner{
+            height: 750px;
+            background-color: #81d4fa ;
+            line-height: 750px;
+
+        }
+        #contents{}
+        #contents1{
+            height: 2280px;
+            background-color: #4fc3f7 ;
+            line-height: 750px;
+            
+        }
+        #contents2{
+            height: 1570px;
+            background-color: #29b6f6 ;
+            line-height: 1570px;
+        }
+        #contents3{
+            height: 530px;
+            background-color: #03a9f4 ;
+            line-height: 530px;
+
+        }
+        #footer{
+            height: 270px;
+            background-color: #039be5 ;
+            line-height: 270px;
+
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+        <!--..header-->
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <!--//banner-->
+        <div id="contents">
+            <div id="contents1">
+                <div class="container">contents1</div>
+            </div>
+            <div id="contents2">
+                <div class="container">contents2</div>
+            </div>
+            <div id="contents3">
+                <div class="container">contents3</div>
+            </div>
+        </div>
+        <!-- //contents-->
+        <div id="footer">
+            <div class="container">footer</div>
+        </div>
+        <!-- //footer-->
+    </div>
+        <!-- //wrap-->
+</body>
+</html>

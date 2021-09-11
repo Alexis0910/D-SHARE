@@ -1,0 +1,866 @@
+//reset
+@charset "UTF-8";
+/* 웹폰트 */
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-style: normal;
+}
+@font-face { 
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv2Gothic';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv2Gothic';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXONLv2Gothic';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+    font-style: normal;
+}
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0
+}
+
+/* 폰트 초기화*/
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #222;
+    font-family: var(--fontNexon1M), AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
+
+/* a링크 초기화 */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* 목록 초기화 ol이거나 ul일때*/
+ol, 
+ul {
+    list-style: none
+}
+/* 스타일 초기화*/
+strong {
+    font-weight: normal;
+}
+em {
+    font-style: normal;
+}
+img {
+    width: 100%;
+}
+//variable
+$font-Six:'Six Caps';
+$font-NEXON1: 'NEXONLv1Gothic';
+$font-NEXON2: 'NEXONLv2Gothic';
+$gradient1: linear-gradient(to bottom, #11e8bb 0%,#8200c9 100%);
+$gradient2: linear-gradient(to bottom, #4facfe 0%, #f8c5f8 100%);
+$gradient3: linear-gradient(to bottom, #dcb0ed 0%,#85a887 100%);
+$gradient4: linear-gradient(to bottom, #243949 0%,#517fa4 100%);
+$gradient5: linear-gradient(to bottom, #f9d423 0%,#e14fad 100%);
+$gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
+
+//mix-in
+@mixin positionCenter{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin content {
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+//agent 브라우저별로 컨트롤 다 가능
+.iphone main {
+    padding: 10px;
+}
+.android main {
+    padding: 10px;
+}
+
+//bg01
+.bg {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &::before {
+        @include content;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0, 0.5);
+        z-index: -1;
+    }
+    &.blue {
+        &::before {
+            background: rgba(24, 25, 42, 0.7);
+        }
+    }
+}
+
+//bg1~10번반복
+@for $i from 1 through 10 {
+    .bg#{$i} {
+        background-image: url(../img/bg#{$i}@X2.jpg);
+    } 
+}
+@for $i from 11 through 20 {
+    .bg#{$i} {
+        background-image: url(../img/bg#{$i}@X2.jpg);
+    } 
+}
+
+
+//main
+#main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #11e8bb; /* Old browsers */
+    background: $gradient1;
+
+    &.game {
+        background: $gradient2;
+        #contents {
+            h1 {
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-image: $gradient2;
+            }
+        }
+    }
+    
+    &.menu {
+        background: $gradient3;
+        #contents {
+            h1 {
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-image: $gradient3;
+                }
+            }
+        }
+    &.mouse {
+        background: $gradient4;
+        #contents {
+            h1 {
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-image: $gradient4;
+            }
+        }
+    }
+    
+    &.parallax {
+        background: $gradient5;
+        #contents {
+            h1 {
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-image: $gradient5;
+            }
+        }
+    }
+    
+    &.slider {
+        background: $gradient6;
+        #contents {
+            h1 {
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-image: $gradient6;
+            }
+        }
+    }
+}
+#contents{
+    h1 {
+        @include positionCenter;
+        font-family: $font-Six, sans-serif;
+        font-size: 10vw;
+        white-space: nowrap;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 1vw;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to bottom, #8200C9, #b5d1ff);
+    }
+}  
+
+#nav {
+    @include positionCenter;
+    bottom: 10px;
+    top: auto;
+    li {
+        list-style: none;
+        display: inline;
+        a {
+            color: #fff;
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #fff;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 14px;
+            text-align: center;
+            margin: 4px;
+            font-family: $font-NEXON1;
+            box-shadow: inset 0 0 0 #fff;
+            transition: all 0.4s;
+
+            &:hover {
+                box-shadow: inset 0 -100px 0 #fff;
+                color: #6c4a70;
+            }
+        }
+    }
+}
+
+//info
+.info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family:$font-NEXON1;
+    color: #fff;
+    padding: 20px;
+
+    &.right {
+        left: auto;
+        right: 0px;
+    }
+    &.bottom {
+        top: auto; //auto는 자동값 일수도 있지만, 위에서 0으로한것을 초기화시켜주는것이다.
+        left: auto; 
+        bottom: 0;
+        right: 0;
+    }
+    &.left {
+        top: auto;
+        left: 0;
+        bottom: 0;
+    }
+    h1 {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 1.6;
+        border-bottom: 1px dashed #fff;
+        display: inline-block;
+        margin-bottom: 10px;
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    p{
+        font-size: 16px;
+        font-weight: 300;
+    }
+    li {
+        list-style: none;
+        display: inline;
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border:1px dashed #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 12px;
+            margin: 3px;
+        }
+        &.active {
+            a{
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
+    &.list {
+        background:rgba(0,0,0,0.4);
+        padding: 20px;
+        font-size: 12px;
+        z-index: 1000;
+        border-radius: 10px;
+        line-height: 1.8;
+        margin: 20px;
+
+        li {
+            display: block;
+        }
+    } 
+    button {
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 5px 20px;
+        color: #fff;
+        border-radius: 50px;
+        box-shadow: 0 0 0 #fff inset;
+        transition: all 0.4s;
+        cursor: pointer;
+        margin-top: 10px;
+
+        &:hover {
+            box-shadow: 0 -50px 0 #fff inset;
+            color: #000;
+        }
+    }
+}
+/* modal 클릭 애니메이션 태그*/
+#modal {
+    position:fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100vh;
+    z-index:1000;
+    transform:scale(0);
+    //대상을 안보이게 해줄수있다. 1하면 다시 복구됨.
+    
+    .modal-bg {
+        background: rgba(0,0,0,0.6);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal-cont {
+    
+            h2 {
+                font-weight: 400;
+                font-size: 30px;
+                margin-bottom: 20px;
+            
+            }
+            p {
+                font-family: 'NEXONLv2Gothic';
+                font-weight: 300;
+                line-height: 1.6;
+                
+            }
+            button {
+                border: 1px solid #000;
+                background: #000;
+                border-radius: 20px;
+                color:#fff;
+                padding: 5px 10px;
+                float:right;
+                cursor: pointer;
+            }
+        }
+    }
+} 
+#modal.show {
+    animation: unfoldIn 1s ease forwards;
+    
+}
+.source {
+    span {
+
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.575);
+        padding: 5px 15px;
+        border-radius: 15px;
+        color:#000;
+        cursor: pointer;
+    }
+}
+/* modal 클릭 애니메이션 태그*/
+#paraModal {
+    position:fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100vh;
+    z-index:1000;
+    transform:scale(0);
+    //대상을 안보이게 해줄수있다. 1하면 다시 복구됨.
+    
+    .modal-bg {
+        background: rgba(0,0,0,0.6);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal-cont {
+    
+            h2 {
+                font-weight: 400;
+                font-size: 30px;
+                margin-bottom: 20px;
+            
+            }
+            p {
+                font-family: 'NEXONLv2Gothic';
+                font-weight: 300;
+                line-height: 1.6;
+                
+            }
+            button {
+                border: 1px solid #000;
+                background: #000;
+                border-radius: 20px;
+                color:#fff;
+                padding: 5px 10px;
+                float:right;
+                cursor: pointer;
+            }
+        }
+    }
+} 
+#paraModal.show {
+    animation: unfoldIn 1s ease forwards;
+    
+}
+#paraModal.show.hide {
+    animation: unfoldOut 1s ease forwards;
+}
+#paraModal.show .modal-bg .modal-cont {
+    transform: scale(0);
+    animation: zoomIn 0.5s 0.8s ease forwards;
+}
+#paraModal.show.hide .modal-bg .modal-cont {
+    transform: scale(0);
+}
+@keyframes unfoldIn {
+    0% {transform:scaley(0.005) scalex(0);}
+    50% {transform:scaley(0.005) scalex(1);}
+    100% {transform:scaley(1) scalex(1);}
+}
+#modal.show.hide {
+    animation: unfoldOut 1s ease forwards;
+}
+@keyframes unfoldOut {
+    0% {transform:scaley(1) scalex(1);}
+    50% {transform:scaley(0.005) scalex(1);}
+    100% {transform:scaley(0.005) scalex(0);}
+}
+#modal.show .modal-bg .modal-cont {
+    transform: scale(0);
+    animation: zoomIn 0.5s 0.8s ease forwards;
+}
+#modal.show.hide .modal-bg .modal-cont {
+    transform: scale(0);
+    animation: zoomOut 0.5s ease forwards;
+}
+@keyframes zoomIn {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+@keyframes zoomOut {
+    0% {transform: scale(1);}
+    100% {transform: scale(0);}
+}
+//code-view
+.code-view {
+    width: 60vw;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+
+    .view-header {
+        border-bottom: 1px solid #f2f2f2;
+        
+        .dot {
+            padding: 13px 10px 10px 15px;
+            span {
+                display: inline-block;
+                width: 12px; height: 12px;
+                border-radius: 50%;
+                margin: 0 2px;
+            }   
+            span:nth-child(1) {
+                background-color: #f56f56;
+            }
+            span:nth-child(2) {
+                background-color: #f6e05e;
+            }
+            span:nth-child(3) {
+                background-color: #48bb78;
+            }
+        }
+    }
+    .view-title {
+        font-family: 'NEXONLv2Gothic';
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 11px;
+        li {
+            display: inline;
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: #cbd5E0;
+                padding: 10px 10px 12px;
+                margin: 0 5px;
+                display: inline-block;
+            }
+        &.active a{
+            border-top: 2px solid #667eea;
+            color: #4a5568;
+            font-weight: 700;
+
+        }
+        }
+    }
+    .view-cont {
+        background: #f8f8f8; 
+        height: 450px;
+        overflow-y: scroll; //y세로로 500이 넘어가면 그 이상은 스크롤이 생겨라 뿅!
+        > div{
+            display: none;
+        }
+        > div:nth-child(1) {
+            display: block;
+        }
+    }
+}
+
+
+
+
+@media(max-width:800px) {
+    #contents{
+        h1 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18vw;
+        }
+    }
+    #nav {
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -50%);
+        font-size: 18vw;
+
+        ul{
+            display: flex;
+            gap:5px;
+        }
+        //position: absolute;
+        //left: 52%;
+        //top: 85%;
+        //justify-content: center;
+        //transform: translate(-50%, -50%);
+        //bottom: 30px;
+        li {
+            
+            a{
+                font-size: 13px;
+                width: 60px;
+                height: 30px;
+                line-height: 30px;
+                
+            }
+        }
+    }
+    .info.right{
+            left: auto;
+            right: 0px;
+            top: 70px;
+    }
+    .code-view {
+        width: 90vw;
+        .view-cont {
+            
+        }
+    }
+    #tab-menu {
+        width: 90vw;
+        .tab-btn {
+                li {
+                    a {
+                        font-size: 11px;
+                    }
+                }
+            
+        }
+    }
+}
+
+// parallax
+.parallax {
+    background: #222;
+    color: #fff;
+    font-family: 'NEXONLv1Gothic';
+}
+.paraScroll {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    background:rgba(0,0,0,0.4);
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 12px;
+}
+.paraInfo2 {
+    position: fixed;
+    left: 20px;
+    bottom: 70px;
+    background:rgba(0,0,0,0.4);
+    padding: 20px;
+    font-size: 12px;
+    border-radius: 10px;
+    line-height: 1.8;
+    z-index: 1000;
+    
+    
+    li {
+        list-style: none;
+    }
+}
+.paranav{
+    position: fixed;
+    right: 20px;top: 20px;
+    z-index: 1000; 
+    background:rgba(0,0,0,0.4);
+    padding: 15px 20px;
+    border-radius: 30px;
+    
+    li {
+        display: inline-block;
+        list-style: none;
+        a {
+            padding: 5px;
+            width: 30px; height: 30px;
+            text-align: center;
+            display: inline-block;
+            line-height: 30px;
+
+        }
+        &.active a {
+            background: #fff;
+            color: #000;
+            border-radius: 50%;
+        }
+    }
+}
+
+.paraInfo {
+    padding: 20px;
+    h1 {
+        display: inline-block;
+        font-size: 20px;
+        border-bottom: 1px dashed #fff;
+        margin-bottom: 8px;
+        font-weight: 400;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+.paraCont {
+    width: 100%;
+    overflow: hidden;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    .content-item {
+        width: 1000px;
+        max-width: 70vw;
+        // background: rgba(255,255,255,0.3);
+        margin: 30vw 0;
+        padding-top: 10vw;
+        text-align: right;
+        position: relative;
+
+        .num {
+            font-family: 'Lato';
+            font-weight: 100;
+            font-size: 25vw;
+            opacity: 0.07;
+            position: absolute;
+            right: -5vw; top: -10vw;
+        }
+        .title {
+            
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        .img-Wrap {
+            width: 100%;
+            padding-bottom: 56%;
+            background: #000;
+            position: relative;
+            .img {
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                filter: saturate(0%);
+                transition: all 1s;
+
+                &:hover {
+                    filter: saturate(100%);
+                }
+            }
+        }
+        .desc {
+            font-size: 5vw;
+            line-height: 1.4;
+            margin-top: -6vw;
+            margin-right: -3vw;
+            position: relative;
+            z-index: 100;
+            word-break: keep-all;
+        }
+        &:nth-child(even){
+            margin-left: auto;
+            text-align: left;
+            .num {
+                right: auto;
+                left: -5vw;
+            }
+            .desc {
+                margin-right: auto;
+                margin-left: -3vw;
+            }
+        }
+    }
+}
+//bg1~10번반복
+@for $i from 1 through 9 {
+    .content-item {
+        &:nth-child(#{$i}){
+            .img {
+            background: url(../img/bg#{$i}.jpg) no-repeat;
+            background-size: cover;
+            }
+        }
+    }
+}
+.paraFooter {
+    padding: 200px 0;
+    h1 {
+        font-size: 8vw;
+        line-height: 1.2;
+        padding: 10vw 8vw 0 8vw;
+        text-transform: uppercase;
+        margin-bottom: 3vw;
+    }
+    em {
+        display: block;
+        font-family: 'Lato';
+        font-weight: 100;
+        padding-left: 18vw;
+    }
+    .footerinfo {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        padding: 15px 20px;
+        margin-bottom: 2px;
+        h2 {
+            padding-right: 20px;
+        }
+        li {
+            display: inline;
+            list-style: none;
+
+            a {
+                color: #fff;
+                border: 1px dashed #fff;
+                width: 30px; height: 30px;
+                display: inline-block;
+                border-radius: 50%;
+                line-height: 30px;
+                text-decoration: none;
+            }
+            &.active a {
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
+}

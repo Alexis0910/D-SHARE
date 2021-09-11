@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습7</title>
+</head>
+<style>
+    @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #wrap{
+        font-family: 'TmonMonsori';
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 50px;
+    }
+    #header{
+        height: 110px;
+        background-color: #bbdefb;
+        line-height: 100px;
+    }
+    #banner{
+        height: 750px;
+        background-color: #90caf9 ;
+        line-height: 750px;
+    }
+    #content{ }
+    #content1{
+        height: 2280px;
+        background-color: #64b5f6 ;
+        line-height: 2280px;
+    }
+        
+    #content2{
+        height: 1570px;
+        background-color: #42a5f5;
+        line-height: 1570px;
+    }
+    #content3{
+        height: 530px;
+        background-color: #2196f3 ;
+        line-height: 530px;
+    }
+    #footer{
+        height: 270px;
+        background-color: #1e88e5 ;
+        line-height: 270px;
+    }
+    .contanier{
+        width: 1200px;
+        height: inherit;
+        background-color: rgba(0,0,0,0.3);
+        margin: 0 auto;
+    }
+    #title{
+        width: 1200px;
+        height: 200px;
+        line-height: 200px;
+        background-color: #795548;
+    }
+    #box1{
+        width: 600px;
+        height: 300px;
+        line-height: 300px;
+        background-color: #795548;
+        float: left;
+    }
+    #box2{
+        width: 600px;
+        height: 300px;
+        line-height: 300px;
+        background-color: #ff9e80;
+        float: left;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="contanier">
+                header
+            </div>
+        </div>
+
+        <div id="banner">
+            <div class="contanier">
+                banner
+            </div>
+        </div>
+<!--//banner-->
+        <div id="content">
+            <div id="content1">
+                <div class="contanier">
+                    <div id="title">
+                        title
+                    </div>
+                    content1
+                </div>
+            </div>
+        <div id="content2">
+                    <div class="contanier">
+                        <div id="box1">
+                            box1
+                        </div>
+                        <div id="box2">
+                            box2
+                        </div>
+                        content2
+                    </div>
+                </div>
+            </div>
+        <div id="content3">
+                <div class="contanier">
+                    content3
+                </div>
+            </div>
+<!--//content-->
+            <div id="footer">
+                <div class="contanier">
+                    footer
+                </div>
+            </div>
+    <!--//footer-->
+        </div>
+    </div>
+<!--//wrap-->
+
+</body>
+</html>

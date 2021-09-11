@@ -1,0 +1,233 @@
+
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery Reference</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div id="wrap">
+            <ul class="page">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../refer-html/index.html">HTML</a></li>
+                <li><a href="../refer-css/index.html">CSS</a></li>
+                <li><a href="../refer-javascript/javascriptRefer01.html">JAVASCRIPT</a></li>
+            </ul>
+            <main id="contents">
+                <div class="title">
+                    <h1><a href="index.html">조작 메서드</a></h1>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="jqueryRefer01.html">선택자</a></li>
+                        <li><a href="jqueryRefer02.html">선택 메서드</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="jqueryRefer03.html">속성 메서드</a></li>
+                        <li class="active"><a href="jqueryRefer04.html">조작 메서드</a></li>
+                        <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
+                        <li><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
+                        <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="jqueryRefer08.html">샘플</a></li>
+                    </ul>
+                </nav>
+    
+                <hr>
+    
+                <div class="table">
+                    <table>
+                        <caption>조작</caption>
+                        <colgroup>
+                            <col style="width: 10%" />
+                            <col style="width: 20%" />
+                            <col style="width: 20%" />
+                            <col style="width: 20%" />
+                            <col style="width: 30%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="center">종류</th>
+                                <th>jquery</th>
+                                <th>예시</th>
+                                <th>javascript</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="center" rowspan="1">복사</td>
+                                <td>.clone()</td>
+                                <td>$("selector").clone()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="center" rowspan="13">추가</td>
+                                <td>.wrap()</td>
+                                <td>$("selector").wrap()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.wrapAll()</td>
+                                <td>$("selector").wrapAll()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.wrapInner()</td>
+                                <td>$("selector").wrapInner()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.append() ⭐</td>
+                                <td>$("selector").append()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.appendTo() ⭐</td>
+                                <td>$("selector").appendTo()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.prepend() ⭐</td>
+                                <td>$("selector").prepend()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.prependTo() ⭐</td>
+                                <td>$("selector").appendTo()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.after()</td>
+                                <td>$("selector").after()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.before()</td>
+                                <td>$("selector").before()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.insertAfter()</td>
+                                <td>$("selector").insertAfter()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.insertBefore()</td>
+                                <td>$("selector").insertBefore()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.html() ⭐</td>
+                                <td>$("selector").html()</td>
+                                <td>innerHTML</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.text() ⭐</td>
+                                <td>$("selector").text()</td>
+                                <td>innerTEXT</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="center" rowspan="4">삭제</td>
+                                <td>.datach() ⭐</td>
+                                <td>$("selector").datach()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.empty()</td>
+                                <td>$("selector").empty()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.remove() ⭐</td>
+                                <td>$("selector").remove()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.unwrap()</td>
+                                <td>$("selector").unwrap()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="center" rowspan="2">대체</td>
+                                <td>.replaceAll()</td>
+                                <td>$("selector").replaceAll()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>.replaceWidth()</td>
+                                <td>$("selector").replaceWidth()</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+
+                <!-- sample01 -->
+                <div id="sample1" class="sample">
+                    <h2>01. 기본선택자 <span class="dot"></span></h2>
+                    <div class="view view1">
+                        <ul>
+                            <li>$("li")</li>
+                            <li class="class">$(".class")</li>
+                            <li id="id">$("#id")</li>
+                            <li>$(".class, #id")</li>
+                            <li>$("*")</li>
+                        </ul>
+                    </div>
+                    <div class="btn btn1">
+                        <a href="#c" class="reset1">리셋</a>
+                        <a href="#c" class="btn1-1">클릭하면 클래스(.class)를 선택합니다.</a>
+                        <a href="#c" class="btn1-2">클릭하면 아이(#id)를 선택합니다.</a>
+                        <a href="#c" class="btn1-3">클릭하면 기본(li) 태그를 선택합니다.</a>
+                        <a href="#c" class="btn1-4">클릭하면 여러가지(#id, .class) 태그를 선택합니다.</a>
+                        <a href="#c" class="btn1-5">클릭하면 전체 태그(*)를 선택합니다.</a>
+                    </div>
+                    <div class="code">
+                        <pre class="line-numbers"><code class="language-js">{
+
+</code></pre>
+                    </div>
+                </div>
+                <hr>
+    
+                <script>
+
+                </script>
+                <!-- sample01  -->
+    
+            </main>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    </body>
+    </html>

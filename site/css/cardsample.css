@@ -1,0 +1,105 @@
+
+/* cardType03 */
+.cardType03 {
+    font-family: 'NanumSquare';
+    padding: 96px 0 80px 0;
+}
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    text-align-last: left;
+    display: block;
+}
+.cardType03 p {
+    display: inline;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: bold;
+
+}
+.cardType03 .new{
+    color: red;
+    float: right;
+    margin-right: 20px;
+}
+.cardType03 .pop {
+    float: right;
+}
+.cardType03 .card-wrap {
+    padding: 45px 0 0 0;
+}
+.cardType03 .card-wrap .red {
+    font-size: 14px;
+    line-height: 1.5;
+    display:inline-block;
+    font-weight: 800;
+    color: #fff;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+    background-color: #ff5151;
+    text-transform: uppercase;
+}
+.cardType03 .card-wrap .green {
+    font-size: 14px;
+    line-height: 1.5;
+    display:inline-block;
+    font-weight: 800;
+    color: #fff;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+    background-color: #11c865;
+    text-transform: uppercase;
+}
+.cardType03 .card-wrap .blue {
+    font-size: 14px;
+    line-height: 1.5;
+    display:inline-block;
+    font-weight: 800;
+    color: #fff;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+    background-color: #5465ff;
+    text-transform: uppercase;
+}
+.cardType03 .card-wrap .card{
+    overflow: hidden;
+    
+}
+
+.cardType03 .card-wrap .card .card-img {
+    display: block;
+    width: 285px;
+    height: 185px;
+    flex-grow: 0;
+    margin: 0 19px 0 3px;
+    object-fit: contain;
+    border-radius: 10px;
+    float: left;
+}
+.cardType03 .card-wrap .div-wrap {
+    height: 220px;
+    display: block;
+
+}
+.cardType03 .card-wrap .div-wrap .card-title {
+    font-size: 26px;
+    font-weight: bold;
+    display: block;
+    margin: 10px;
+}
+.cardType03 .card-wrap .div-wrap .card-desc {
+    height: 895px;
+    font-size: 16px;
+    line-height: 1.53;
+    margin: 14px 2px 17px 0px;
+    display: inline;
+    text-align: left;
+}
+.cardType03 .card-wrap .div-wrap .card-date {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    text-decoration: underline;
+    position: relative;
+    margin: 16px 0 0 0;
+}

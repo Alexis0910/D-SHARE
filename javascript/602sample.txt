@@ -1,0 +1,213 @@
+                    <li>align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.</li>
+                    <li>align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.</li>
+                    <li>align-self 속성은 콘텐츠의 정렬 상태를 정의합니다.</li>
+                    <li>all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+                    <li>animation 속성은 애니메이션을 정의합니다.</li>
+                    <li>animation-delay 속성은 애니메이션 지연 시간을 설정합니다.</li>
+                    <li>animation-direction 속성은 애니메이션 움직임 방향을 설정합니다.</li>
+                    <li>animation-duration 속성은 애니메이션 움직임 시간을 설정합니다.</li>
+                    <li>animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+                    <li>animation-iteration-count 속성은 애니메이션 반복 횟수 설정합니다.</li>
+                    <li>animation-name 속성은 애니메이션 keyframe 이름을 설정합니다.</li>
+                    <li>animation-play-state 속성은 애니메이션 진행상태를 설정합니다.</li>
+                    <li>animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다.</li>
+                    <li>backdrop-filter 속성은 배경에 그래픽 효과를 설정합니다.</li>
+                    <li>backface-visibility 속성은 요소의 뒷면을 설정합니다.</li>
+                    <li>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</li>
+                    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+                    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+                    <li>background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                    <li>background-color 속성은 백그라운드 색을 설정합니다.</li>
+                    <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
+                    <li>background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                    <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+                    <li>background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다.</li>
+                    <li>background-size 속성은 백그라운드 이미지 사이즈를 설정합니다.</li>
+                    <li>border 속성은 테두리 속성을 일괄적으로 설정합니다.</li>
+                    <li>border-bottom 속성은 테두리 아래쪽 속성을 일괄적으로 설정합니다.</li>
+                    <li>border-bottom-color 속성은 테두리 아래쪽 색 속성을 설정합니다.</li>
+                    <li>border-bottom-left-radius 속성은 아래부분 왼쪽 모서리 굴곡을 설정합니다.</li>
+                    <li>border-bottom-right-radius 속성은 아래부분 오른쪽 모서리 굴곡을 설정합니다.</li>
+                    <li>border-bottom-style 속성은 테두리 아래쪽 스타일 속성을 설정합니다.</li>
+                    <li>border-bottom-width 속성은 테두리 아래쪽 두께 속성을 설정합니다.</li>
+                    <li>border-collapse 속성은 테이블의 테두리 분리 여부를 설정합니다.</li>
+                    <li>border-color 속성은 테두리 색 속성을 설정합니다.</li>
+                    <li>border-image 속성은 테두리 이미지 속성을 설정합니다.</li>
+                    <li>border-image-outset 속성은 테두리 이미지 간격 속성을 설정합니다.</li>
+                    <li>border-image-repeat 속성은 테두리 이미지 반복 속성을 설정합니다.</li>
+                    <li>border-image-slice 속성은 테두리 이미지 크기 속성을 설정합니다.</li>
+                    <li>border-image-source 속성은 테두리 이미지 경로 속성을 설정합니다.</li>
+                    <li>border-image-width 속성은 테두리 이미지 두께 속성을 설정합니다.</li>
+                    <li>border-left 속성은 테두리 왼쪽 속성을 일괄적으로 설정합니다.</li>
+                    <li>border-left-color 속성은 테두리 왼쪽 색 속성을 설정합니다.</li>
+                    <li>border-left-style 속성은 테두리 왼쪽 스타일 속성을 설정합니다.</li>
+                    <li>border-left-width 속성은 테두리 왼쪽 두께 속성을 설정합니다.</li>
+                    <li>border-radius 속성은 모서리 굴곡을 설정합니다.</li>
+                    <li>border-right 속성은 테두리 오른쪽 속성을 일괄적으로 설정합니다.</li>
+                    <li>border-right-color 속성은 테두리 오른쪽 색 속성을 설정합니다.</li>
+                    <li>border-right-style 속성은 테두리 오른쪽 스타일 속성을 설정합니다.</li>
+                    <li>border-right-width 속성은 테두리 오른쪽 두께 속성을 설정합니다.</li>
+                    <li>border-spacing 속성은 테이블의 테두리 간격을 설정합니다.</li>
+                    <li>border-style 속성은 테두리 스타일 속성을 설정합니다.</li>
+                    <li>border-top 속성은 테두리 위쪽 속성을 일괄적으로 설정합니다.</li>
+                    <li>border-top-color 속성은 테두리 위쪽 색 속성을 설정합니다.</li>
+                    <li>border-top-left-radius 속성은 윗부분 왼쪽 모서리 굴곡을 설정합니다.</li>
+                    <li>border-top-right-radius 속성은 윗부분 오른쪽 모서리 굴곡을 설정합니다.</li>
+                    <li>border-top-style 속성은 테두리 위쪽 스타일 속성을 설정합니다.</li>
+                    <li>border-top-width 속성은 테두리 위쪽 두께 속성을 설정합니다.</li>
+                    <li>border-width 속성은 테두리 두께 속성을 설정합니다.</li>
+                    <li>bottom 속성은 위치 요소의 아래쪽 속성을 설정합니다.</li>
+                    <li>box-decoration-break 속성은 컬럼 및 줄바꿈시 테두리와 패딩의 방식을 설정합니다</li>
+                    <li>box-shadow 속성은 박스 요소의 그림자를 설정합니다.</li>
+                    <li>box-sizing 속성은 요소 크기에 패딩 포함 여부를 설정합니다.</li>
+                    <li>break-after 속성은 생성된 상자 이후 페이지,열 또는 영역구분의 작동방식을 설정합니다.</li>
+                    <li>break-before 속성은 생성된 상자 이전에 페이지, 열 또는 영역 구분의 동작 방식을 설정합니다.</li>
+                    <li>break-inside 속성은 생성된 상자 내에서 페이지, 열 또는 영역 구분의 동작 방식을 설정합니다.</li>
+                    <li>caption-side 속성은 caption의 위치를 설정합니다.</li>
+                    <li>caret-color 속성은 input의 커서 색을 정의합니다.</li>
+                    <li>clear 속성은 float 요소의 성질을 차단합니다.</li>
+                    <li>clip 속성은 보이는 영역을 설정합니다.</li>
+                    <li>color 속성은 글씨 색을 설정합니다.</li>
+                    <li>color-scheme 속성을 사용하면 요소가 편안하게 렌더링할 수 있는 색 구성표를 나타낼 수 있습니다.</li>
+                    <li>column-count 속성은 컬럼의 수를 정의합니다.</li>
+                    <li>column-fill 속성은 열의 지정방법을 정의합니다.</li>
+                    <li>column-gap 속성은 컬럼의 간격을 정의합니다.</li>
+                    <li>column-rule 속성은 컬럼 라인의 가로값, 스타일, 컬러를 정의합니다.</li>
+                    <li>column-rule-color 속성은 컬럼의 라인 색을 정의합니다.</li>
+                    <li>column-rule-style 속성은 컬럼 라인의 스타일을 정의합니다.</li>
+                    <li>column-rule-width 속성은 컬럼 라인의 가로값을 정의합니다.</li>
+                    <li>column-span 속성은 열의 속성을 정의합니다.</li>
+                    <li>column-width 속성은 컬럼의 가로 값을 정의합니다.</li>
+                    <li>columns 속성은 열의 폭과 열의 수를 정의합니다.</li>
+                    <li>contain </li>
+                    <li>content-visibility 속성은 필요할 때까지 대규모 레이아웃 및 렌더링 작업을 잠재적으로 생략할 수 있습니다.</li>
+                    <li>content 속성은 콘텐츠 내용을 설정합니다.</li>
+                    <li>counter-increment 속성은 콘텐츠의 순서 상태를 정의합니다.</li>
+                    <li>counter-reset 속성은 콘텐츠의 숫자를 초기화합니다. </li>
+                    <li>counter-set 속성은 CSS 카운터를 지정된 값으로 설정합니다.</li>
+                    <li>cursor 속성은 마우스 오버시 마우스 포인터를 정의합니다.</li>
+                    <li>direction 속성은 문장의 방향을 설정합니다.</li>
+                    <li>display 속성은 요소의 성질을 정의합니다.</li>
+                    <li>empty-cells 속성은 테이블의 빈요소의 속성을 설정합니다.</li>
+                    <li>filter 속성은 그래픽 효과를 설정합니다.</li>
+                    <li>flex 속성은 콘텐츠의 성질을 flex로 정의합니다.</li>
+                    <li>flex-basis 속성은 요소의 기본 단위를 정의합니다.</li>
+                    <li>flex-direction 속성은 요소의 정렬 방향을 정의합니다.</li>
+                    <li>flex-flow 속성은 요소의 정렬 방향과 줄 속성을 설정합니다.</li>
+                    <li>flex-grow 속성은 요소의 크기를 숫자를 통해 정의합니다.</li>
+                    <li>flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.</li>
+                    <li>flex-wrap 속성은 요소의 줄 속성을 설정합니다.</li>
+                    <li>float 속성은 블록요소의 정렬 상태를 설정합니다.</li>
+                    <li>font 속성은 폰트에 관 속성은 한 설정을 정의합니다.</li>
+                    <li>font-family 속성은 폰트 종류를 설정합니다.</li>
+                    <li>font-size 속성은 폰트 사이즈 속성을 설정합니다.</li>
+                    <li>font-size-adjust 속성은 소문자를 기준으로 폰트 크기를 설정합니다.</li>
+                    <li>font-stretch 속성은 폰트의 굵기를 정의합니다.</li>
+                    <li>font-style 속성은 폰트의 스타일을 정의합니다.</li>
+                    <li>font-variant 속성은 글꼴의 변형을 정의합니다.</li>
+                    <li>font-variant-position 속성은 대첨자 또는 첨자로 배치된 대체 작은 글리프의 사용을 제어합니다.</li>
+                    <li>font-weight 속성은 폰트의 두께를 정의합니다.</li>
+                    <li>forced-color-adjust 속성을 사용하여 특정 요소를 강제 색상 모드에서 제외할 수 있습니다.</li>
+                    <li>grid 속성은 세로 열과 가로 행을 기준으로 요소를 정렬할 수 있습니다. </li>
+                    <li>grid-area 속성은 특정 item을 2열 1에서 시작하여 2행 3열에 걸쳐 배치합니다.</li>
+                    <li>grid-auto-columns 속성은 암시적인 열(Track)의 크기를 정의합니다.</li>
+                    <li>grid-auto-flow 속성은 자동 배치 알고리즘 방식을 정의합니다./li>
+                    <li>grid-auto-rows 속성은 암시적인 행(Track)의 크기를 정의합니다.</li>
+                    <li>grid-column 속성은 grid-column-start와 grid-column-end 속성을 같이 사용합니다.</li>
+                    <li>grid-column-end 속성은 특정 item을 표시하기 끝마칠 열을 지정합니다.</li>
+                    <li>grid-column-gap 속성은 그리드 열사이의 간격 설정합니다.</li>
+                    <li>grid-column-start 속성은 특정 item을 표시하기 시작할 열을 지정합니다.</li>
+                    <li>grid-gap 속성은 grid-row-gap와 grid-column-gap 속성을 같이 사용합니다.</li>
+                    <li>grid-row 속성은 grid-row-start와 grid-row-end 속성을 같이 사용합니다.</li>
+                    <li>grid-row-end 속성은 특정 item을 표시하기 끝마칠 행을 지정합니다.</li>
+                    <li>grid-row-gap 속성은 행과 행 사이의 간격(Line)을 정의</li>
+                    <li>grid-row-start 속성은 특정 item을 표시하기 시작할 행을 지정합니다.</li>
+                    <li>grid-template 속성은 grid-template-xxx의 단축 속성입니다.</li>
+                    <li>grid-template-areas </li>
+                    <li>grid-template-columns 속성은 가로 컬럼의 크기와 위치를 설정합니다.</li>
+                    <li>grid-template-rows 속성은 그리드 행의 크기 조정 기능을 설정합니다.</li>
+                    <li>hanging-punctuation 속성은 글씨의 시작 및 끝의 위치 정의합니다.</li>
+                    <li>height 속성은 콘텐츠 요소의 세로값을 설정합니다.</li>
+                    <li>hyphens 속성은 텍스트의 하이픈 영역을 설정합니다.</li>
+                    <li>image-rendering 속성은 이미지 스케일링 알고리즘을 설정합니다.</li>
+                    <li>inline-size 속성은 요소 블록의 쓰기 모드에 따라 수평 또는 수직 크기를 정의합니다.</li>
+                    <li>isolation 속성은 stacking context을 설정합니다.</li>
+                    <li>justify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</li>
+                    <li>justify-items 속성은 적절한 축을 따라 각 상자를 정당화하는 기본 방법을 제공합니다.</li>
+                    <li>justify-self 속성은 적절한 축을 따라 정렬 컨테이너 내부에서 상자를 정렬하는 방식을 설정합니다.</li>
+                    <li>left 속성은 위치 요소의 왼쪽 속성을 설정합니다./li>
+                    <li>letter-spacing 속성은 글자 사이의 간격을 설정합니다.</li>
+                    <li>line-height 속성은 문장과 문장 사이의 간격을 설정합니다.</li>
+                    <li>list-style 속성은 목록 스타일 속성을 설정합니다.</li>
+                    <li>list-style-image 속성은 목록 마커의 이미지를 설정합니다.</li>
+                    <li>list-style-position 속성은 목록 마커의 위치 속성을 설정합니다.</li>
+                    <li>list-style-type 속성은 목록 마커의 유형을 설정합니다.</li>
+                    <li>margin 속성은 요소의 바같쪽 여백을 설정합니다.</li>
+                    <li>margin-bottom 속성은 요소의 아래 바같쪽 여백을 설정합니다.</li>
+                    <li>margin-left 속성은 요소의 왼쪽 바같쪽 여백을 설정합니다.</li>
+                    <li>margin-right 속성은 요소의 오른쪽 바같쪽 여백을 설정합니다.</li>
+                    <li>margin-top 속성은 요소의 위부분 바같쪽 여백을 설정합니다.</li>
+                    <li>max-height 속성은 요소의 최대 세로값을 설정합니다.</li>
+                    <li>max-width 속성은 요소의 최대 가로 값을 설정합니다.</li>
+                    <li>min-height 속성은 요소의 최소 세로 값을 설정합니다.</li>
+                    <li>min-width 속성은 요소의 최소 가로 값을 설정합니다.</li>
+                    <li>mix-blend-mode 속성은 배경의 혼합 상태를 정의합니다.</li>
+                    <li>object-fit 속성은 img, video 태그의 크기를 정의합니다.</li>
+                    <li>object-position 속성은 img, video 태그의 위치를 정의합니다.</li>
+                    <li>opacity 속성은 요소의 투명도를 설정합니다.</li>
+                    <li>order 속성은 flex 콘텐츠의 순서를 정의합니다.</li>
+                    <li>border 속성은 테두리 속성을 일괄적으로 설정합니다.</li>
+                    <li>outline-color 속성은 아웃라인의 색을 정의합니다.</li>
+                    <li>outline-offset 속성은 아웃라인의 간격을 정의합니다.</li>
+                    <li>outline-style 속성은 아웃라인 스타일을 정의합니다.</li>
+                    <li>outline-width 속성은 아웃라인의 두께를 정의합니다.</li>
+                    <li>overflow 속성은 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다.</li>
+                    <li>overflow-x 속성은 X축을 기준으로 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다.</li>
+                    <li>overflow-y 속성은 Y축을 기준으로 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다.</li>
+                    <li>padding 속성은 요소의 안쪽 여백을 설정합니다.</li>
+                    <li>padding-bottom 속성은 요소의 아래쪽 여백을 설정합니다.</li>
+                    <li>padding-left 속성은 요소의 왼쪽 여백을 설정합니다.</li>
+                    <li>padding-right 속성은 요소의 오른쪽 여백을 설정합니다.</li>
+                    <li>padding-top 속성은 요소의 위쪽 여백을 설정합니다.</li>
+                    <li>page-break-after 속성은 페이지 인쇄시 분리에 관한 설정을 정의합니다.</li>
+                    <li>page-break-before 속성은 인쇄시 페이지 분리에 관한 설정을 정의합니다.</li>
+                    <li>page-break-inside 속성은 인쇄시 페이지 분리에 관한 설정을 정의합니다.</li>
+                    <li>perspective 속성은 3D를 표현할 때 원근점을 정의합니다.</li>
+                    <li>perspective-origin 속성은 3D를 표현할 때 원근점의 방향을 정의합니다.</li>
+                    <li>pointer-events 속성은 포인터 이벤트 반응을 정의합니다.</li>
+                    <li>position 속성은 요소의 위치를 설정합니다.</li>
+                    <li>quotes 속성은 인용 부호를 정의합니다.</li>
+                    <li>resize 속성은 요소의 사이즈를 정의합니다.</li>
+                    <li>right 속성은 위치 요소의 오른쪽 속성을 설정합니다.</li>
+                    <li>tab-size 속성은 글씨의 간격을 정의합니다.</li>
+                    <li>table-layout 속성은 표의 레이아웃 크기를 정의합니다.</li>
+                    <li>text-align 속성은 텍스트 정렬 방식을 설정합니다.</li>
+                    <li>text-align-last 속성은 문장의 마지막 텍스트 정렬 방식을 설정합니다.</li>
+                    <li>text-decoration 속성은 글자 라인 속성을 설정합니다.</li>
+                    <li>text-decoration-color 속성은 글자 라인 색을 설정합니다.</li>
+                    <li>text-decoration-line 속성은 글자 라인 스타일을 설정합니다.</li>
+                    <li>text-decoration-style 속성은 글자 스타일을 정의합니다.</li>
+                    <li>text-indent 속성은 문단 들여쓰기 속성을 설정합니다.</li>
+                    <li>text-justify 속성은 텍스트의 간격을 정의합니다.</li>
+                    <li>text-overflow 속성은 문자열 영역 속성을 설정합니다.</li>
+                    <li>text-shadow 속성은 텍스트에 그림자를 설정합니다.</li>
+                    <li>text-transform 속성은 텍스트를 대문자나 소문자로 변경합니다.</li>
+                    <li>top 속성은 위치 요소의 위쪽 속성을 설정합니다.</li>
+                    <li>transform 속성은 요소의 움직임을 표현합니다.</li>
+                    <li>transform-origin 요소의 움직임 방향을 정의합니다</li>
+                    <li>transform-style 속성은 요소의 움직임 스타일을 정의합니다.</li>
+                    <li>transition 속성은 요소의 움직임을 정의합니다.</li>
+                    <li>transition-delay 속성은 요소의 움직임 시간을 지연합니다.</li>
+                    <li>transition-duration 속성은 요소의 움직임 지속시간을 정의합니다.</li>
+                    <li>transition-property 속성은 transition의 적용 여부를 정의합니다.</li>
+                    <li>transition-timing-function 속성은 요소의 움직임 기능을 정의합니다.</li>
+                    <li>unicode-bidi 속성은 글자의 방향 속성을 설정합니다.</li>
+                    <li>user-select 속성은 요소의 텍스트를 선택할 지 정의합니다.</li>
+                    <li>vertical-align 속성은 텍스트의 상하 정렬 방식을 설정합니다..</li>
+                    <li>visibility 속성은 요소를 보이지 않게 정의합니다.</li>
+                    <li>white-space 속성은 줄바꿈, 공백, 줄 속성을 설정합니다.</li>
+                    <li>width 속성은 요소의 가로 값을 정의합니다.</li>
+                    <li>word-break 속성은 줄바꿈 속성을 설정합니다.</li>
+                    <li>word-spacing 속성은 단어 사이의 간격을 정의합니다.</li>
+                    <li>word-wrap 속성은 줄바꿈을 설정합니다.</li>
+                    <li>z-index 속성은 요소의 위치가 겹칠 경우 순서를 정의합니다.</li>

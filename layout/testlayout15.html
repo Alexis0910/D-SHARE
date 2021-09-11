@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0a;
+            padding: 0a;
+        }
+        body {
+            background-color: #fce4ec ;
+        }
+        #wrap {
+            font-family: 'TmonMonsori';
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #880e4f ;
+            height: 100px;
+            line-height: 100px;
+
+        }
+        nav {
+            background-color: #c2185b;
+            height: 100px;
+            line-height: 100px;
+        }
+        main {
+            width: 100%;
+            overflow: hidden;
+        }
+        aside {
+            width: 40%;
+            height: 600px;
+            background-color: #e91e63 ;
+            float: left;
+            line-height: 600px;
+        }
+        .article1{
+            width: 60%;
+            height: 300px;
+            background-color: #ec407a;
+            line-height: 300px;
+            float: left;
+        }
+        .article2{
+            width: 30%;
+            height: 300px;
+            background-color: #f06292 ;
+            float: left;
+        }
+        .article2 .inner-article2 {
+            padding: 0 auto;
+            margin: 0;
+            width: 310px;
+            height: 250px;
+            position: absolute;
+            transform: translate(10%,10%);
+            background-color: #d81b60 ;
+            background-clip: content-box;
+            line-height: 250px;
+        }
+        .article3{
+            width: 30%;
+            height: 300px;
+            background-color: #f06292 ;
+            float: left;
+        }
+        .article3 .inner-article3 {
+            padding: 0 auto;
+            margin: 0;
+            width: 310px;
+            height: 250px;
+            line-height: 250px;
+            position: absolute;
+            transform: translate(5%,10%);
+            background-color: #d81b60 ;
+            background-clip: content-box;
+        }
+        footer {
+            height: 100px;
+            line-height: 100px;
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>HEADER</header>
+        <nav>NAV</nav>
+        <main>
+            <aside>SIDE</aside>
+            <article class="article1">CONTENT1</article>
+            <article class="article2">
+                <div class="inner-article2">cont1</div></article>
+            <article class="article3">
+                <div class="inner-article3">cont2</div></article>
+        </main>
+        <footer>FOOTER</footer>
+    </div>
+    </body>
+</html>

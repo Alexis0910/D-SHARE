@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <title>Menu Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.min.css">
+    <style>
+        #tab-menu {
+        max-width: 600px;
+        background: rgb(103, 87, 104);
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        font-family: 'NEXONLv2Gothic';
+        color: #fff;
+        overflow: hidden; 
+        }
+        .tab-btn {
+            display: block;
+        }
+        .tab-btn ul{
+            display: flex;
+        }
+        .tab-btn li{
+            width: 20%;
+            text-align: center;
+            list-style: none;
+        }
+        .tab-btn li.active a{
+            border-bottom: 3px solid rgb(209, 148, 228);
+            font-weight: 700;
+        }
+        .tab-btn li a {
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 15px 15px ;
+            display: block;
+        }
+        .tab-cont{
+            background: #fff;
+            padding: 20px;
+            color: #222;
+        }
+        .tab-cont > div {
+            display: none;
+        }
+        .tab-cont > div:nth-child(1){
+            display: block;
+        }
+        .tab-cont > div p{
+            line-height: 1.6;
+        }
+        .view-cont > div{
+            display: none;
+        }
+        .view-cont > div:nth-child(1) {
+            display: block;
+        } 
+    </style>
+</head> 
+<body class="bg bg1">
+    <!--contents -->
+    <main>
+        <div id="tab-menu">
+            <div class="tab-btn">
+                <ul>
+                    <li class="active"><a href="#">tab1</a></li>
+                    <li><a href="#">tab2</a></li>
+                    <li><a href="#">tab3</a></li>
+                    <li><a href="#">tab4</a></li>
+                    <li><a href="#">tab5</a></li>
+                </ul>
+            </div>
+            <div class="tab-cont">
+                <div>
+                    <h2>苦盡甘來 (고진감래)</h2>
+                    <p>고생끝에 낙이 온다.</p>
+                </div>
+                <div>
+                    <h2>見仁見智 (견인견지)</h2>
+                    <p>사람은 보는것에 따라 생각을 달리한다.</p>
+                </div>
+                <div>
+                    <h2>騎虎之勢 (기호지세)</h2>
+                    <p>호랑이 등에 타고가다가 내리게되면 잡혀먹힌다는 뜻.
+                        일을 계획하여 시작하면 중도에 포기하지 말라.</p>
+                </div>
+                <div>
+                    <h2>老馬之智 (노마지지)</h2>
+                    <p>늙은 말에게도 지혜가 있다는 말로 비록 하찮은 것일지라도 장점이 있다.</p>
+                </div>
+                <div>
+                    <h2>大器晩成 (대기만성)</h2>
+                    <p>큰일이나 큰 인물은 쉽게 이루어지는 것이 아니라 각고의 노력끝에 이루어진다.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--// contents-->
+    <!-- info -->
+    <div class="info">
+        <h1>javascript Menu Effect01</h1>
+        <p>메뉴 에픽트 - 탭 메뉴</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li class="active"><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jqueryME01.html">1</a></li>
+            <li><a href="jqueryME02.html">2</a></li>
+            <li><a href="jqueryME03.html">3</a></li>
+            <li><a href="jqueryME04.html">4</a></li>
+            <li><a href="jqueryME05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button>소스보기</button>
+    </div>
+    <!-- //into-->
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">javascript</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div id="tab-menu"&gt;
+        &lt;div class="tab-btn"&gt;
+            &lt;ul&gt;
+                &lt;li class="active"&gt;&lt;a href="#"&gt;사자성어1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;사자성어2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;사자성어3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;사자성어4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;사자성어5&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="tab-cont"&gt;
+            &lt;div&gt;
+                &lt;h2&gt;苦盡甘來 (고진감래)&lt;/h2&gt;
+                &lt;p&gt;고생끝에 낙이 온다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;見仁見智 (견인견지)&lt;/h2&gt;
+                &lt;p&gt;사람은 보는것에 따라 생각을 달리한다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;騎虎之勢 (기호지세)&lt;/h2&gt;
+                &lt;p&gt;호랑이 등에 타고가다가 내리게되면 잡혀먹힌다는 뜻.
+                    일을 계획하여 시작하면 중도에 포기하지 말라.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;老馬之智 (노마지지)&lt;/h2&gt;
+                &lt;p&gt;늙은 말에게도 지혜가 있다는 말로 비록 하찮은 것일지라도 장점이 있다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;大器晩成 (대기만성)&lt;/h2&gt;
+                &lt;p&gt;큰일이나 큰 인물은 쉽게 이루어지는 것이 아니라 각고의 노력끝에 이루어진다.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+        </div>
+                        <div class="css">
+<pre><code class="language-css">#tab-menu {
+    max-width: 600px;
+    background: rgb(103, 87, 104);
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    font-family: 'NEXONLv2Gothic';
+    color: #fff;
+    overflow: hidden;
+}
+.tab-btn ul{
+    display: flex;
+}
+.tab-btn li{
+    width: 20%;
+    text-align: center;
+    list-style: none;
+}
+.tab-btn li.active a{
+    border-bottom: 3px solid rgb(209, 148, 228);
+    font-weight: 700;
+}
+.tab-btn li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: block;
+}
+.tab-cont{
+    background: #fff;
+    padding: 20px;
+    color: #222;
+}
+.tab-cont > div {
+    display: none;
+}
+.tab-cont > div:nth-child(1){
+    display: block;
+}
+.tab-cont > div p{
+    line-height: 1.6;
+}
+</code></pre>
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">const tabBtn = document.querySelectorAll(".tab-btn ul li");
+    const tabCont = document.querySelectorAll(".tab-cont > div");
+
+    tabBtn.forEach((element, index)=>{ 
+        element.addEventListener("click", function(){ 
+            tabBtn.forEach((el)=>{
+                el.classList.remove("active");
+            });
+            element.classList.add("active");
+
+            tabCont.forEach((el)=>{
+                el.style.display = "none";
+            });
+            tabCont[index].style.display = "block";
+        });
+    });          
+</code></pre>
+                </div>
+                    </div>
+                    </div>
+                    <button>닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//modal-->
+</body>
+    <!-- script -->
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        window.onload = function () {
+            //init();
+            //animate();
+            agentCheck(); //호환성체크
+        }
+        const tabBtn = document.querySelectorAll(".tab-btn ul li a");
+        const tabCont = document.querySelectorAll(".tab-cont > div");
+
+        tabBtn.forEach((element, index)=>{ //tabBtn 다중선택에서 btn내가클릭한것
+            element.addEventListener("click", function(){ 
+                tabBtn.forEach((el)=>{
+                    el.classList.remove("active");
+                });
+                element.classList.add("active");
+
+                tabCont.forEach((el)=>{
+                    el.style.display = "none";
+                });
+                tabCont[index].style.display = "block";
+            });
+        });
+            //code tab menu javascript ver.
+            const viewTitle = document.querySelectorAll(".view-title li");
+            const viewCont = document.querySelectorAll(".view-cont > div");
+
+            viewTitle.forEach((element, index)=>{
+                element.addEventListener("click", function(){
+                    viewTitle.forEach((el)=>{
+                        el.classList.remove("active");
+                    });
+                    element.classList.add("active");
+
+                    viewCont.forEach((el)=>{
+                        el.style.display = "none";
+                    });
+                    viewCont[index].style.display = "block";
+                });
+            });
+    </script>
+</html>
