@@ -46,11 +46,12 @@ include "../connect/session.php";
                     $result = $connect -> query($sql);
 
                     $view = "UPDATE myBoard SET boardView = boardView+1 WHERE myBoardID = {$boardID}";
+                    $connect -> query($view);
 
                     if ($result) {
                         $info = $result -> fetch_array(MYSQLI_ASSOC);
                         echo "<h3>" . $info['boardTitle'] . "</h3>";
-                        echo "<h4>" . $info['youUserName'] . "<h4>";
+                        echo "<h4>" . $info['youUserName'] . "</h4>";
                         echo "<p>" . date('Y-m-d H:i', $info['regTime']) . "</p>";
                     }
                     ?>
@@ -93,9 +94,9 @@ include "../connect/session.php";
                         $info = $result -> fetch_array(MYSQLI_ASSOC);
 
                     if( $info['myMemberID'] == $_SESSION['myMemberID'] ){ ?>
-                        <a href="boardRemove.php?boardID=<?= $_GET['boardID'] ?>" onclick="if(!confirm('정말 삭제하시겠습니까?')){return false;}"><button
-                            class="right01">삭제하기</button></a>
-                        <a href="boardModify.php?boardID=<?= $_GET['boardID'] ?>"><button class="right02">수정하기</button></a>
+                    <a href="boardRemove.php?boardID=<?= $_GET['boardID'] ?>"
+                        onclick="if(!confirm('정말 삭제하시겠습니까?')){return false;}"><button class="right01">삭제하기</button></a>
+                    <a href="boardModify.php?boardID=<?= $_GET['boardID'] ?>"><button class="right02">수정하기</button></a>
                     <?php
                         } else {
                         }

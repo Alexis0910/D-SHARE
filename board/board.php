@@ -34,7 +34,6 @@
     <header id="header">
         <?php 
             include "../include/header.php";
-            
         ?>
     </header>
     <!--//header-->
@@ -204,14 +203,12 @@
 
                                     //마지막 페이지 초기화
                                     if($endPage >= $boardTotalPage) $endPage = $boardTotalPage;
-                                    
 
                                     //이전 페이지
                                     if( $page != 1 ){
                                         $prevPage = $page - 1;
                                         echo "<li><a href='board.php?page={$prevPage}'><</a></li>";
                                     }
-
 
                                     for( $i=$startPage; $i<=$endPage; $i++ ){
                                         $active = '';

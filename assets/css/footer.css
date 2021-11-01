@@ -2,11 +2,12 @@ footer {
     width: 100%;
     background: #6597B4;
     bottom: 0;
-    z-index: 1000;
+    z-index: 10;
 }
 
 footer .container {
     height: 70px;
+    width: 90%;
 }
 
 footer .inner {
@@ -35,6 +36,7 @@ footer .inner .group>span {
     padding: 0 17px;
     border-right: 1px solid rgb(233, 233, 233);
 }
+
 footer .inner .group>span:last-child {
     border-right: none;
 }

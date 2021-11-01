@@ -21,7 +21,7 @@ include "../connect/session.php";
 <body>
     <div class="inner">
         <div class="group">
-            <a href="../index.html"><img src="../assets/img/LOGOSHARE.svg" alt="로고"></a>
+            <a href="../route-pop/routelist.php"><img src="../assets/img/LOGOSHARE.svg" alt="로고"></a>
             <div class="ham">
                 <span></span>
             </div>
@@ -40,14 +40,14 @@ include "../connect/session.php";
                     <li id="route_dis"><a href="../route-dis/routelist.php">거리</a></li>
                 </ul>
                 <ul class="right">
-                    <li id="root_tab"><a href="#c">루트생성</a></li>
-                    <li id="bookmark_tab"><a href="#c">북마크</a></li>
+                    <li id="root_tab"><a href="../create-route/createWrite.php">루트생성</a></li>
+                    <!-- <li id="bookmark_tab"><a href="#c">북마크</a></li> -->
                     <li id="board_tab"><a href="../board/board.php">Q&A</a></li>
                     <li id="login_tab">
                         <?php if( isset($_SESSION['myMemberID']) ){ ?>
-                        <a href="#">MYPAGE</a>
+                            <li id="mypage_tab"><a href="../mypage/main.php">MYPAGE</a></li>
                         <?php } else { ?>
-                        <a href="../login/login.php">LOGIN</a>
+                            <a href="../login/login.php">LOGIN</a>
                         <?php } ?>
                         </a></li>
                     <li id="logout_tab">
@@ -109,6 +109,13 @@ include "../connect/session.php";
         case 'route-theme':
             $("#route_theme").addClass("active");
             break;
+        case 'create-route':
+            $("#root_tab").addClass("active");
+        break;
+        case 'mypage':
+            $("#mypage_tab").addClass("active");
+        break;
+
     }
 </script>
 

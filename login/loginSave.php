@@ -77,7 +77,7 @@
             //var_dump($memberInfo);
             //echo "</pre>";
 
-            Header("Location: ../board/board.php");
+            Header("Location: ../route-pop/routelist.php");
         }
     } else {
         msg ("에러발생 - 관리자에게 문의하세요!");

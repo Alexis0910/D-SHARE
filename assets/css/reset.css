@@ -130,29 +130,26 @@ dl.list li::before {
 }
 
 .input_write2 {
-    border: 2px solid #a69cf7;
-    padding: 15px 30px;
-    margin: 5px;
-    border-radius: 50px;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #385e72;
+    padding: 10px 20px;
+    border-radius: 10px;
     outline: none;
-    background-color: #dfdaff;
-    color: #9082f5;
-}
-
-.input_write2.w100 {
-    min-width: 300px;
+    background: #fff;
+    color: #3f718b;
 }
 
 .input_write2::-webkit-input-placeholder {
-    color: #9082f5;
+    color: #3f718b;
 }
 
 .input_write2:-ms-input-placeholder {
-    color: #9082f5;
+    color: #3f718b;
 }
 
 .input_write2::placeholder {
-    color: #9082f5;
+    color: #3f718b;
 }
 
 /* 이미지 표현 방법 */
@@ -193,3 +190,72 @@ dl.list li::before {
     line-height: 0;
     text-indent: -9999px;
 }
+
+
+
+
+/* comment */
+#comment {
+    margin-top: 20px;
+}
+.comment-form {
+    margin-bottom: 40px;
+}
+.comment-form h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.comment-wrap {
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+}
+.text {
+    width: 92%;
+    margin-right: 10px;
+}
+
+.comment-wrap button {
+    font-size: 16px;
+    background: #D6E1E7;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 10%;
+}
+
+.comment-list {}
+.list {}
+.list-info {}
+.list-cont01 {
+    display: flex;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.list-cont01 img {
+    width: 30px;
+    margin-right: 10px;
+}
+.list-cont01 .name {
+    font-size: 18px;
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 8px;
+    line-height: 1.8;
+}
+.list-cont02 {
+    background: #e1ecf1;
+    margin-bottom: 20px;
+    padding: 14px 24px;
+    border-radius: 10px;
+}
+.list-cont02 p {
+    margin-bottom: 8px;
+}
+.list-cont02 .date {
+    font-size: 11px;
+    color: rgb(76, 122, 146);
+}
+
+
+
+

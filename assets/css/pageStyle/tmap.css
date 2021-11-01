@@ -1,0 +1,572 @@
+
+body {
+    padding-top: 60px;
+  }
+  .container {
+      width: 1300px;
+  }
+  #mapWrap {
+      display: flex;
+      justify-content: space-between;
+    
+  }
+  #map {
+      width: 100%;
+  }
+  #container {
+      border: 1px solid #C9C9C9;
+      border-radius: 10px;
+      width: 100%;
+      margin-top: 30px;
+  }
+  
+  /* routeView */
+  .routeView {
+    margin: 0 0 100px 0;
+    margin-top:200px;
+    border: 1px solid #C9C9C9;
+    border-radius: 10px;
+    padding: 80px 100px 50px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 12px rgb(0 0 0 / 5%);
+    transition: all .5s;
+  }
+
+  .routeViewDesc {
+    width: 100%;
+  }
+
+  .routeViewDesc h1 {
+    display: block;
+    border-bottom: 1px solid #979797;
+    font-size: 35px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .routeViewDesc h5 {
+    margin: 10px 0;
+    color: #979797;
+  }
+
+  .routeViewDesc h5:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: url(/assets/img/human.svg) no-repeat;
+    background-size: cover;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .routeViewDesc h3 {
+    font-weight: 200;
+  }
+
+  .routeViewDesc p {
+    padding: 10px 0 0 0;
+    border-top: 1px solid #979797;
+    display: inline-block;
+    margin-top: 10px;
+    color: #979797;
+  }
+
+  .map {
+    width:100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .map_wrap {
+    float: left;
+  }
+
+  .routeInfo {
+    width: 90%;
+    height: 400px;
+    display: inline-block;
+    font-size: 15px;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #C9C9C9;
+    border-radius: 10px;
+    padding: 30px 0 40px 100px;
+  }
+
+
+  .routeInfo .center {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    position: absolute;
+    left: 125px;
+  }
+
+  .routeInfo .center a {
+    width: 100%;
+    ;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .routeInfo .center a p {
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 50px;
+    background-color: #D6E1E7;
+    border-radius: 5px;
+  }
+  .Tmapmain {       
+    top:100px;
+    max-width: 600px;
+  }
+  
+  .Tmapmain .main__header {
+    padding: 10px 5px;
+    margin-left:10px;
+  }
+  .main__header__result {
+    padding: 10px 5px;
+  }
+  .Tmapmain .main__map {  /* border: 1px gray solid; */
+    width: 100%;
+    max-height: 400px;
+  }
+  
+  .main__map-empty {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .option-bar {
+    max-width: 600px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .option-bar .option-bar__column {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    flex: 1 1 auto;
+    border: 1px gray solid;
+    position: relative;
+  }
+  
+  .option-bar .option-bar__column .option-bar__column__checkbox {
+    position: absolute;
+    top: 15px;
+    padding-left: 0.7em;
+    text-align: left;
+  }
+  
+
+
+  input[type="checkbox"] {
+    width: 2em;
+    height: 2em;
+    font-size: 0.5em;
+  
+    position: relative;
+    top: 0.5em;
+}
+
+.routeInfo #start {
+  display: block;
+  padding: 25px 0;
+  position: relative;
+  font-size: 18px;
+  
+}
+
+.routeInfo #start:before {
+  content: '출발';
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #55B9F0;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  left: -70px;
+  line-height: 3.2;
+  top: 23px;
+}
+
+.routeInfo #dropby {
+  display: inline-block;
+  padding: 28px 0;
+  border-bottom: 1px solid #C9C9C9;
+  border-top: 1px solid #C9C9C9;
+  position: relative;
+  font-size: 18px;
+
+}
+
+.routeInfo #dropby:before {
+  content: '경유';
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #598299;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  left: -70px;
+  line-height: 3.2;
+  top: 23px;
+}
+
+.routeInfo #destination {
+  display: block;
+  padding: 25px 0 20px;
+  position: relative;
+  font-size: 18px;
+}
+
+.routeInfo #destination:before {
+  content: '도착';
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff748b;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  left: -70px;
+  line-height: 3.2;
+  top: 23px;
+}
+.routeInfo .navigate {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  left: 125px;
+}
+
+.routeInfo .navigate p {
+  width: 100%;
+  text-align: left;
+  align-items: left;
+  display: inline-block;
+}
+.routeInfo .center label {
+  font-size: 13px;
+
+}
+.routeInfo .center button {
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 13px 50px;
+  background-color: #D6E1E7;
+  border-radius: 5px;
+}
+
+.interation {
+  width:100%;
+}
+
+.interation .heart {
+    margin: 30px 0;
+    position: relative;
+}
+
+.interation .heart .like {
+    background: url(/assets/img/like.png) no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.interation .heart .like.active {
+    background: url(/assets/img/likeFull.svg) no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+.interation .heart p {
+    color: #99B6C6;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 35px;
+}
+
+.interation .delete {
+    float: right;
+    padding: 5px 10px;
+    border: 1px solid rgb(190, 190, 190);
+    color: rgb(163, 163, 163);
+    border-radius: 10px;
+    transition: all .1s;
+}
+
+.interation .delete:hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: rgb(107, 107, 107);
+}
+
+.interation .tags {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 0.5%;
+}
+
+.interation .tags a span {
+    display: inline-block;
+    color: #979797;
+    padding: 4px 16px;
+    border: 1px solid #979797;
+    border-radius: 20px;
+}
+
+.interation .comments {}
+
+.interation .comments h4 {}
+
+.interation .comments h5 {
+    margin: 20px 20px 20px 0;
+    color: #979797;
+    position: absolute;
+}
+
+.interation .comments input {
+    width: 89%;
+    height: 40px;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.interation .comments button {
+    width: 10%;
+    height: 40px;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-top: 10px;
+    float: right;
+    background-color: #0e0e0e;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.interation .comments h5:before {
+    position: relative;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: url(/assets/img/human.svg) no-repeat;
+    background-size: cover;
+    display: inline-block;
+    margin-right: 5px;
+    top: 8px;
+}
+
+@media(max-width:1310px){
+  /* body {
+      padding-top: 60px;
+    } */
+    .container {
+      width: 85vw;
+  }
+    /* routeView */
+  .routeView {
+    margin: 0 0 100px 0;
+    margin-top:200px;
+    border: 1px solid #C9C9C9;
+    border-radius: 10px;
+    padding: 70px 50px 50px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 12px rgb(0 0 0 / 5%);
+  }
+
+  .routeViewDesc {
+    width: 100%;
+  }
+
+  .routeViewDesc h1 {
+    font-size: 33px;
+  }
+  .routeViewDesc h5 {
+  }
+
+  .routeViewDesc p {
+    padding: 10px 0 0 0;
+    border-top: 1px solid #979797;
+    display: inline-block;
+    margin-top: 10px;
+    color: #979797;
+  }
+  .routeViewDesc h3 {
+    font-size: 14px;
+  }
+  .map {
+    width:100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .map_wrap {
+    float: left;
+  }
+  .routeInfo {
+    text-align: left;
+    width: 95%;
+    display: inline-block;
+    font-size: 15px;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #C9C9C9;
+    border-radius: 10px;
+    padding: 30px 0 40px 70px;
+  }
+  .routeInfo div {
+    left:100px
+  }
+  .routeInfo #start {
+    padding: 20px 0;
+    position: relative;
+    font-size: 15px;
+  }
+  .routeInfo #start:before {
+    top: 15px;
+    left: -55px;
+  }
+  
+  .routeInfo #dropby {
+    text-align: left;
+    font-size: 15px;
+  }
+  
+  .routeInfo #dropby:before {
+    left: -55px;
+  }
+  
+  .routeInfo #destination {
+    display: block;
+    padding: 25px 0 20px;
+    position: relative;
+    font-size: 15px;
+  }
+  
+  .routeInfo #destination:before {
+    left: -55px;
+    top: 15px; 
+  }
+  .routeInfo .navigate {
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    position: absolute;
+    left: 125px;
+  }
+  
+  .routeInfo .navigate p {
+    width: 100%;
+    text-align: left;
+    align-items: left;
+    display: inline-block;
+  }
+  .routeInfo .center {
+    left:80px;
+  }
+  .routeInfo .center button {
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #D6E1E7;
+  }
+  
+}    
+@media(max-width:800px){
+  #mapWrap {
+    display: inline-block;
+}
+  .container {
+    width: 85vw;
+}
+  /* routeView */
+  .routeView {
+    margin-top:200px;
+    padding: 60px 80px 50px;
+  }
+  .routeViewDesc {
+    width: 100%;
+  }
+  .routeViewDesc h1 {
+    font-size: 33px;
+  }
+  .routeViewDesc h5 {
+  }
+
+  .routeViewDesc p {
+    padding: 10px 0 0 0;
+    border-top: 1px solid #979797;
+    display: inline-block;
+    margin-top: 10px;
+    color: #979797;
+  }
+  .routeViewDesc h3 {
+    font-size: 14px;
+  }
+  .map {
+    width:100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  #mapWrap {
+    display: block;
+}
+  .routeInfo {
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+    font-size: 15px;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #C9C9C9;
+    border-radius: 10px;
+    padding: 30px 60px 40px 80px;
+  }
+  .interation{}
+  .interation .tags{
+    flex-direction: column;
+  }
+  .interation .tags a span{
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}
+@media(max-width:500px){}

@@ -2,7 +2,6 @@
     include "../connect/connect.php";
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +35,6 @@
     <header id="header">
         <?php 
             include "../include/header.php";
-            
         ?>
     </header>
     <!--//header-->
@@ -49,7 +47,7 @@
                     <p>빠른시간 내에 응답드리도록 노력하겠습니다.</p>
                 </div>
                 <div class="board-write">
-                    <form action="boardWriteSave.php" name="boardWrite" method="post" autocomplete="false">
+                    <form action="boardWriteSave.php" name="boardWrite" method="post">
                         <fieldset class="board-write-wrap">
                             <legend class="ir_so">게시판 글쓰기 영역입니다.</legend>
                             <div class="boardTitle">

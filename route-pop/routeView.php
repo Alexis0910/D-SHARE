@@ -17,15 +17,11 @@
     <link rel="stylesheet" href="../assets/css/font.css">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/pageStyle/route_style.css">
-
-    <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=l7xx46c00b11477744339549d3160f8ae14a"></script>
-
-
+    <!-- <link rel="stylesheet" href="../assets/css/route_style.css"> -->
+    <link rel="stylesheet" href="../assets/css/pageStyle/tmap.css">
 </head>
 
-
-<body onload="initTmap()">
+<body>
     <div id="skip">
         <a class="ir_so" href="#contents">컨텐츠 바로가기</a>
         <a class="ir_so" href="footer">푸터 바로가기</a>
@@ -44,56 +40,189 @@
             <article class="content-article">
                 <div class="boardType">
                     <div class="board">
-                        <div class="board-search">
-                            <form action="routeSearch.php" name="boardSearch" method="get">
-                                <fieldset>
-                                    <select name="searchOption" id="searchOption" class="form-select">
-                                        <option value="title">제목</option>
-                                        <option value="content">내용</option>
-                                        <option value="name">등록자</option>
-                                    </select>
-                                    <legend class="ir_so">게시한 검색 영역</legend>
-                                    <input type="search" name="searchKeyword" class="form-search"
-                                        placeholder="  검색어를 입력하세요" aria-label="search" required>
-                                    <button type="submit" action="routeSearch.php" class="form-btn">검색</button>
-                                </fieldset>
-                            </form>
-                        </div>
+
                         <div class="routeView">
                             <div class="routeViewDesc">
-                                <h1>파주시 임진각 관광지</h1>
+                                <?php
+                                    $routeID = $_GET['routeID'];
+
+                                    $sql = "SELECT r.routeTitle, r.routeContent, m.youUserName FROM myRoute r JOIN myMember m ON(r.myMemberID = m.myMemberID) 
+                                        WHERE r.myRouteID = {$routeID}";
+
+                                    $result = $connect -> query($sql);
+
+                                    if ($result) {
+                                        $info = $result -> fetch_array(MYSQLI_ASSOC);
+                                        echo "<h1>".$info['routeTitle']."</h1>";
+                                        echo "<span></span>";
+                                        echo "<h5>".$info['youUserName']."</h5>";
+                                        echo "<h3>".$info['routeContent']."</h3>";
+                                        // echo "<h3>" . date('Y-m-d H:i', $info['regTime']) . "</h3>";
+                                    }
+                                ?>
+
+                                <!-- <h1>파주시 임진각 관광지</h1>
+                                <span></span>
                                 <h5>UserName</h5>
-                                <h3>평화로운 마음이 드는 코스. 도착지 주변에 평화랜드가 있어 유원지 구경하기에도 좋고, 주변에 유명한 베이커리 카페가 있다.</h3>
-                                <p>총 거리 14.5km</p>
+                                <h3>평화로운 마음이 드는 코스. 도착지 주변에 평화랜드가 있어 유원지 구경하기에도 좋고, 주변에 유명한 베이커리 카페가 있다.</h3> -->
                             </div>
-                            <div class="map">
-                                <div class="routeInfo">
-                                    <span class="start">파주역 경의중앙선</span>
-                                    <span class="dropby">경기도 파주시 문산읍 사목리 207-2</span>
-                                    <span class="destination">동마기업평화랜드</span>
-                                    <div class="center">
-                                        <a href="#">
-                                            <p>안내 시작</p>
-                                        </a>
+
+                            <!-- 안내, 지도묶음 -->
+                            <div id="mapWrap">
+                                <div class="map">
+                                    <div class="routeInfo">
+                                        <button id="start"></button>
+                                        <button id="dropby"></button>
+                                        <button id="destination"></button>
+                                        <div class="center">
+                                            <div class="option-bar__column__checkbox">
+                                                <p>
+                                                    <input type="checkbox" name="checkbox1" id="checkbox1" /><label
+                                                        for="checkbox1"></label>
+                                                    <br />
+                                                    <input type="checkbox" name="checkbox2" id="checkbox2"
+                                                        value="true" /><label for="checkbox2"></label>
+                                                </p>
+                                            </div>
+                                            <a href="#">
+                                                <button id="navigate">안내 시작</button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div id="map_div"></div>
+                                <!-- tmap-->
+                                <div id="container">
+                                    <div class="option-bar">
+                                    </div>
+                                    <div class="Tmapmain">
+                                        <div class="main__header">
+                                            <span class="main__header__result"> </span>
+                                        </div>
+                                        <div class="main__map main__map-empty" id="map"></div>
+                                    </div>
+                                </div>
+                                <!-- //tmap -->
                             </div>
                             <div class="interation">
                                 <div class="heart">
                                     <div class="like"></div>
                                     <p>1,234</p>
+
+                                    <?php 
+                                        $routeID = $_GET['routeID'];
+
+                                        $sql = "SELECT myMemberID FROM myRoute WHERE myRouteID = {$routeID};";
+
+                                        $result = $connect -> query($sql);
+
+                                        $info = $result -> fetch_array(MYSQLI_ASSOC);
+
+                                        if( $info['myMemberID'] == $_SESSION['myMemberID'] ){ ?>
+                                                    <a href="routeDelete.php?routeID=<?= $_GET['routeID'] ?>"
+                                                        onclick="if(!confirm('정말 삭제하시겠습니까?')){return false;}"><button
+                                                            class="delete">삭제하기</button></a>
+                                                    <?php
+                                        } else {
+                                        }
+                                    ?>
                                 </div>
+
                                 <div class="tags">
-                                    <a href="#"> <span>#힐링</span></a>
+                                    <!-- <a href="#"> <span>#힐링</span></a>
                                     <a href="#"> <span>#휴가</span></a>
                                     <a href="#"> <span>#산뜻</span></a>
-                                    <a href="#"> <span>#여름</span></a>
+                                    <a href="#"> <span>#여름</span></a> -->
+                                    <?php
+                                        $routeID = $_GET['routeID'];
+
+                                        $sql = "SELECT routeTags FROM myRoute WHERE myRouteID = {$routeID}";
+
+                                        $result = $connect -> query($sql);
+
+                                        if ($result) {
+                                            $info = $result->fetch_array(MYSQLI_ASSOC);
+
+                                            // var_dump($info["routeTags"]);
+
+                                            $tag = explode('#', $info["routeTags"]);
+
+                                            for ($i = 1; $i < count($tag); $i++) {
+                                                echo "<a href='#'><span>#".$tag[$i]."</span></a>";
+                                            }
+
+                                            // echo "<a href='#'><span>".$temp[1]."</span></a>";
+                                        }
+                                    ?>
                                 </div>
-                                <hr>
-                                <div class="comments">
-                                    <h4>Comments</h4>
-                                    <h5>댓글을 입력해주세요.</h5>
+                            </div>
+                            <hr>
+                            <!-- <div class="comments">
+                                <h4>Comments</h4>
+                                <input type="input" name="comment" class="form-comment" placeholder="댓글을 입력해주세요." />
+                                <button>확인</button>
+                            </div> -->
+
+                            <div id="comment">
+                                <!-- 댓글 쓰기 -->
+                                <div class="comment-form">
+                                    <form action="../comment/commentSave.php" method="post" name="comment">
+                                        <fieldset>
+                                            <legend class="ir_so">댓글 영역</legend>
+                                            <h4>Comments</h4>
+                                            <div class="comment-wrap">
+                                                <!-- <div>
+                                                    <label for="youUserName" class="ir_so">이름</label>
+                                                    <input type="text" name="youUserName" id="youUserName" class="input_write2" placeHolder="이름" autocomplete="off" maxlength="10" required>
+                                                </div> -->
+                                                <div class="text">
+                                                    <label for="youText" class="ir_so">댓글</label>
+                                                    <input type="text" name="youText" id="youText" class="input_write2"
+                                                        placeHolder="댓글을 입력해주세요" autocomplete="off" required>
+                                                </div>
+                                                <button class="btn_submit" type="submit" value="확인">확인</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+                                <!-- 댓글 보기 -->
+                                <div class="comment-list">
+                                    <?php
+                                        include "../connect/connect.php";
+
+                                        $sql = "SELECT * FROM myComment LIMIT 10";
+                                        $result = $connect -> query($sql);
+
+                                        // echo "<pre>";
+                                        // var_dump(mysqli_fetch_array($result));
+                                        // echo "</pre>";
+
+                                        while($info = mysqli_fetch_array($result)){
+                                    ?>
+                                    <div class="list">
+                                        <div class="list-info">
+                                            <div class="list-cont01">
+                                                <img src="../assets/img/profile.svg" alt="프로필 사진">
+                                                <span class="name"><?=$info['youUserName']?></span>
+                                            </div>
+                                            <div class="list-cont02">
+                                                <p><?=$info['youText']?></p>
+                                                <span class="date"><?=date('Y-m-d H:i', $info['regTime'])?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                        }
+                                    ?>
+
+                                    <!-- <div>
+                                        <p>저 신청하겠습니다!</p>
+                                        <div>
+                                            <img src="https://coop97.github.io/dothome21/class/img/img11.jpg" alt="순두부 아이스크림">
+                                            <span>황기우</span>
+                                            <span>2021-09-16</span>
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -107,13 +236,20 @@
         <?php
             include "../include/footer.php";
         ?>
-
     </footer>
     <!--footer-->
 
+    <script
+        src="https://api2.sktelecom.com/tmap/js?version=1&format=javascript&appKey=l7xx46c00b11477744339549d3160f8ae14a">
+    </script>
+    <script src="../assets/JS/data.js"></script>
+    <script src="../assets/JS/whentogo.js"></script>
+    <script src="../assets/JS/findpath.js"></script>
+    <script src="../assets/JS/logic.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=350d9c7df8ad330744f2f9c8ce42fe24"></script> -->
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script>
     $(".like").click(function () {
         if ($(".like").hasClass("active")) {
@@ -122,142 +258,7 @@
             $(".like").addClass("active");
         }
     });
-
-    // 1. 지도 띄우기
-    map = new Tmapv2.Map("map_div", {
-        center: new Tmapv2.LatLng(37.52084364186228, 127.058908811749),
-        width: "58%",
-        height: "400px"
-    });
-
-
-    // 2. 시작, 도착 심볼찍기
-
-    var markerList = [];
-    var pointArray = [];
-
-    // 시작
-    addMarker("llStart", 127.02810900563199, 37.519892712436906, 1);
-    // 도착 
-    addMarker("llEnd", 127.11971717230388, 37.49288934463672, 2);
-
-    function addMarker(status, lon, lat, tag) {
-        //출도착경유구분
-        //이미지 파일 변경.
-        var markerLayer;
-        switch (status) {
-            case "llStart":
-                imgURL = 'http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png';
-                break;
-            case "llPass":
-                imgURL = 'http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_p.png';
-                break;
-            case "llEnd":
-                imgURL = 'http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png';
-                break;
-            default:
-        };
-        var marker = new Tmapv2.Marker({
-            position: new Tmapv2.LatLng(lat, lon),
-            icon: imgURL,
-            map: map
-        });
-        // 마커 드래그 설정
-        marker.tag = tag;
-        marker.addListener("dragend", function (evt) {
-            markerListenerEvent(evt);
-        });
-        marker.addListener("drag", function (evt) {
-            markerObject = markerList[tag];
-        });
-        markerList[tag] = marker;
-        return marker;
-    }
-
-
-    // 3. 경유지 심볼 찍기
-    addMarker("llPass", 127.07389565460413, 37.5591696189164, 3);
-    addMarker("llPass", 127.13346617572014, 37.52127761904626, 4);
-
-
-    // 4. 경로탐색 API 사용요청
-    var startX = 127.02810900563199;
-    var startY = 37.519892712436906;
-    var endX = 127.11971717230388;
-    var endY = 37.49288934463672;
-    var passList = "127.07389565460413,37.5591696189164_127.13346617572014,37.52127761904626";
-    var prtcl;
-    var headers = {};
-    headers["appKey"] = unq_tmak;
-    $.ajax({
-        method: "POST",
-        headers: headers,
-        url: 'https://apis.openapi.sk.com/tmap/routes?version=1&format=json',
-        async: false,
-        data: {
-            startX: startX,
-            startY: startY,
-            endX: endX,
-            endY: endY,
-            passList: passList,
-            reqCoordType: "WGS84GEO",
-            resCoordType: "WGS84GEO",
-            angle: "172",
-            searchOption: "0",
-            trafficInfo: "Y"
-        },
-        success: function (response) {
-            prtcl = response;
-
-            // 5. 경로탐색 결과 Line 그리기 
-            var trafficColors = {
-                extractStyles: true,
-                /* 실제 교통정보가 표출되면 아래와 같은 Color로 Line이 생성됩니다. */
-                trafficDefaultColor: "#636f63", //Default
-                trafficType1Color: "#19b95f", //원할
-                trafficType2Color: "#f15426", //지체
-                trafficType3Color: "#ff970e" //정체		
-            };
-            var style_red = {
-                fillColor: "#FF0000",
-                fillOpacity: 0.2,
-                strokeColor: "#FF0000",
-                strokeWidth: 3,
-                strokeDashstyle: "solid",
-                pointRadius: 2,
-                title: "this is a red line"
-            };
-            drawData(prtcl);
-
-
-            // 6. 경로탐색 결과 반경만큼 지도 레벨 조정
-            var newData = geoData[0];
-            PTbounds = new Tmapv2.LatLngBounds();
-            for (var i = 0; i < newData.length; i++) {
-                var mData = newData[i];
-                var type = mData.geometry.type;
-                var pointType = mData.properties.pointType;
-                if (type == "Point") {
-                    var linePt = new Tmapv2.LatLng(mData.geometry.coordinates[1], mData.geometry
-                        .coordinates[0]);
-                    console.log(linePt);
-                    PTbounds.extend(linePt);
-                } else {
-                    var startPt, endPt;
-                    for (var j = 0; j < mData.geometry.coordinates.length; j++) {
-                        var linePt = new Tmapv2.LatLng(mData.geometry.coordinates[j][1], mData.geometry
-                            .coordinates[j][0]);
-                        PTbounds.extend(linePt);
-                    }
-                }
-            }
-            map.fitBounds(PTbounds);
-        },
-        error: function (request, status, error) {
-            console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" +
-                "error:" + error);
-        }
-    });
 </script>
+
 
 </html>
